@@ -1,0 +1,142 @@
+body {
+  background: #f4f6f9;
+  font-family: "Arial", sans-serif;
+}
+.header {
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.sidebar {
+  background: #fff;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s;
+}
+.sidebar.collapsed {
+  width: 70px;
+}
+.sidebar.collapsed .nav-link span {
+  display: none;
+}
+.sidebar .nav-link {
+  color: #1e3a8a;
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background: #e9ecef;
+  color: #3b82f6;
+  transform: translateX(5px);
+}
+.content {
+  margin-left: 250px;
+  padding: 30px;
+  transition: margin-left 0.3s;
+}
+.content.expanded {
+  margin-left: 70px;
+}
+.card {
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.btn-primary {
+  background: linear-gradient(90deg, #3b82f6, #1e40af);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.3s;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+  transform: scale(1.05);
+}
+.modal-content {
+  border-radius: 12px;
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.table {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.table-hover tbody tr:hover {
+  background: #f1f3f5;
+  transition: background 0.2s;
+}
+.search-container input {
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: 1px solid #d1d5db;
+  transition: all 0.3s;
+}
+.search-container input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+.dropzone {
+  border: 2px dashed #3b82f6;
+  border-radius: 10px;
+  padding: 20px;
+  background: #f8fafc;
+  transition: border-color 0.3s;
+}
+.dropzone:hover {
+  border-color: #1e40af;
+}
+.footer {
+  background: #1e3a8a;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+.alert {
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: slideIn 0.3s;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.apexcharts-canvas {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
